@@ -73,8 +73,16 @@ For it to fit with the motor model computationaly it needs $\omega_{i-1}$ as inp
 When simulating it seems like the last load will just increase in speed until infinity. This is not the simulations fault but our simplified motor model without any back-emf or similar.
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{DymolaRotationalSpeed.eps}
+\includegraphics[width=0.8\textwidth]{matlabRotationalSpeed.eps}
 \caption{Rotational speed of last load in matlab}
+\end{figure}
+
+\subsection*{e}
+The most obvious thing to comment is that the system is unstable.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{matlabBode.eps}
+\caption{Bode plot done with matlab}
 \end{figure}
 
 
