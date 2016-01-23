@@ -66,10 +66,26 @@ combining equations give the linearized system
 
 
 \section*{Problem 2}
+\subsection*{b}
+For it to fit with the motor model computationaly it needs $\omega_{i-1}$ as input and to fit with next load it needs $\omega_{i}$ as output. It also need to have $T_{i-1}$ as output and $T_i$ as input. For energy flow it would possibly be more natural to have $T_{i-1}$ and $\omega_{i-1}$ as inputs and $T_i$ and $\omega_i$ as outputs.
+
+\subsection*{d}
+When simulating it seems like the last load will just increase in speed until infinity. This is not the simulations fault but our simplified motor model without any back-emf or similar.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{DymolaRotationalSpeed.eps}
+\caption{Rotational speed of last load in matlab}
+\end{figure}
+
+
 
 \section*{Problem 3}
-
-
+\subsection*{a}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{DymolaRotationalSpeed.eps}
+\caption{Rotational speed of last load in dymola}
+\end{figure}
 
 
 \end{document}
