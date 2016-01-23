@@ -1,5 +1,5 @@
 % motor constants
-J_m = 1;
+Jm = 1;
 
 
 % load constants
