@@ -29,10 +29,59 @@
 \subsection*{a}
 There are 5 variables, so 5 equations should be implemented.
 
+\section*{Problem 2}
+For a rational transfer function to be positive real it must satisfy:
+\begin{enumerate}
+\item All the poles of $H(s)$ have real parts less than or equal to zero.
+\item $Re(H(j\omega)) \geq 0$ for all $\omega$ so that $j \omega$ is not a pole of $H(s)$.
+\item If $j \omega_0$ is pole in $H(s)$, then it is a simple pole, and
+\[Res_{s = j\omega_0} [H(s)] = \lim_{s \rightarrow j\omega_0} (s - j\omega_0)H(s)\]
+is real and positive. If $H(s)$ has a pole at inifinity, then it is a simple pole, and
+\[R_{\infty} = \lim_{\omega \rightarrow \infty} \frac{H(j\omega)}{j\omega}\]
+\end{enumerate}
 
+\subsection*{a}
+In regards to the transfer function:
+\[H_1(s) = \frac{1}{1+Ts}\]
+It is obvious that all poles have real parts less then or equal to zero as long as $T > 0$. The frequency response
+\[H_1(j\omega) = \frac{1 - j \omega T}{1 + (\omega T)^2}\]
+has positive real parts for all $\omega$
+\[Re(H_1(j \omega)) = \frac{1}{1 + (\omega T)^2}\]
+And it got no poles on the imaginary axis. Thus $H_1$ is real positive.
 
+The other transfer function:
+\[H_2(s) = \frac{s}{s^2 + \omega^2_0}\]
+Has poles only on the imaginary axis, $j\omega$ and $-j\omega$. The first and second criteria is thus satisfied but the third criteria remains.
+\[Res_{s = \pm j \omega_0}H(s) = \frac{1}{2}\]
+Thus $H_2$ is real positive.
 
+\subsection*{b}
+Consider the transfer function
+\[H_3(s) = \frac{s + a}{(s + b)(s + c)} \]
+Since $c > 0$ and $b > 0$ the first criteria is satisfied and the thrid criteria is not applicable. Considering the second criteria:
+\[Re(H_3(j\omega)) = \frac{abc - a\omega^2 + b\omega^2 + c\omega^2 }{(\omega^2 + b^2)(\omega^2 + c^2)} \]
+If $a \leq b + c$ the the criteria is satisfied, and if $a > b + c$ it fails. Meaning it is positive real for all $a \leq b + c$
 
+\subsection*{c}
+Considering the transfer function
+\[H_4(s) = \frac{s^2 + a^2}{s(s^2 + \omega_0^2)}\]
+The first criteria is satisfied since all poles are on the imaginary axis. The second criteria is also satsified since $Re(H_4(j \omega)) = 0$. The third criteria requires that the following are real and positive:
+\[Res_{s = 0}[H_4(s)] = \frac{a^2}{\omega_0^2}\]
+\[Res_{s = \pm j\omega_0}[H_4(s)] = \frac{\omega_0^2 - a^2}{2\omega_0^2}\]
+Thus if $a < \omega_0$ then the transfer function is positive real.
+
+\subsection*{d}
+
+By chosing the storage function
+\[V = \frac{1}{2} T y^2\]
+i get 
+\[\dot{V} = Ty = uy - y^2\]
+Which obviously satisfy
+\[\dot{V} = uy - g(y)\]
+where $g(y) = y^2$ which is positive definite.
+
+\subsection*{e}
+It's already given that all poles are in the left half plane thus the first criteria is satisfied and the third is not applicable. So wether $H(s)$ is positive real is the same as if the second criteria is satisfied, namely if $Re[H(j\omega)] \geq 0$ for all $\omega \not = 0$ 
 
 
 
