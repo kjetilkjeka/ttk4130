@@ -1,0 +1,153 @@
+\documentclass[11pt]{article}
+
+\usepackage[norsk]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx, float}
+\usepackage{pstricks-add}
+
+
+\author{Kjetil Kjeka}
+\title{TTK4130 - Exercise 3}
+\date{\today}
+
+
+%Slik at matriser kan defineres med linjer
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+
+
+
+\begin{document}
+\maketitle
+\section*{Problem 1}
+\subsection*{a}
+The system in state space form can be written as:
+\[
+\begin{bmatrix}
+\dot{x_1} \\
+\dot{x_2}
+\end{bmatrix}
+=
+\begin{bmatrix}
+x_2 \\
+-c x_2 - g [1 - (\frac{1}{x_1})^k]
+\end{bmatrix}
+\]
+\subsection*{b}
+Eulers method for this system can be expressed as:
+
+\[
+\begin{bmatrix}
+x_{1,n+1} \\
+x_{2,n+1}  
+\end{bmatrix}
+=
+\begin{bmatrix}
+x_{1,n} + hx_{2,n} \\
+x_{2,n} + h(-cx_{2,n} - g[1-(\frac{1}{x_{1,n}})^k])
+\end{bmatrix}
+\]
+
+\subsection*{c}
+
+Euler's modified method for this system can be expressed as:
+\begin{equation*}
+\mathbf{k_1} = 
+\begin{bmatrix}
+k_{1,1}\\
+k_{1,2}
+\end{bmatrix} = 
+\begin{bmatrix}
+x_{2,n}\\
+-cx_{2,n} - g[1-(\frac{1}{x_{1,n}})^k]
+\end{bmatrix}
+\end{equation*}
+\begin{equation*}
+\mathbf{k_2} = 
+\begin{bmatrix}
+k_{2,1}\\
+k_{2,2}
+\end{bmatrix} = 
+\begin{bmatrix}
+x_{2,n} + \frac{h}{2}k_{1,2}\\
+-c(x_{2,n}+\frac{h}{2}k_{1,2}) + g(1-(\frac{1}{x_{1,n}+\frac{h}{2}k_{1,2}})^k
+\end{bmatrix}
+\end{equation*}
+\begin{equation*}
+\mathbf{x_{n+1}} = \begin{bmatrix}
+x_{1,n+1}\\
+x_{2,n+1}
+\end{bmatrix}
+=
+\begin{bmatrix}
+x_{1,n+1} = x_{1,n} + hk_{2,1}\\
+x_{2,n+1} = x_{2,n} + hk_{2,2}
+\end{bmatrix}
+\end{equation*}
+
+\subsection*{d}
+The sxstem matrix $A$ is given bx
+\begin{equation}
+A = \begin{bmatrix}
+\frac{\delta f_1}{\delta x_1} && \frac{\delta f_1}{\delta x_2}\\
+\frac{\delta f_2}{\delta x_1} && \frac{\delta f_2}{\delta x_2}\\
+\end{bmatrix}_{x_1=1,x_2 = 0}
+=
+\begin{bmatrix}
+0 && 1\\
+-gk(\frac{1}{x_1})^{k+1} && -c
+\end{bmatrix}_{x_1=1,x_2 = 0}
+=
+\begin{bmatrix}
+0 && 1\\
+-gk && -c
+\end{bmatrix}
+\end{equation}
+and the eiqenvalues are calculated as
+\begin{equation}
+det(A-\lambda i) = \det(\begin{matrix}
+-\lambda && 1\\
+-gk && -c-\lambda
+\end{matrix})
+=
+-\lambda(-c-\lambda) - (-gk) = \lambda^2 + c\lambda + gk = 0
+\end{equation}
+This gives
+\begin{equation}
+\lambda_{1,2} = -0.5c \pm 0.5\sqrt{c^2-4gk}
+\end{equation}
+
+\subsection*{e}
+\subsubsection*{i}
+For $c=0$ we have the eigenvalues
+\begin{equation}
+\lambda_{1,2} = 0 \pm 0.5\sqrt{0-4gk} = 0.5\sqrt{-4gk} = \pm 3.71i
+\end{equation}
+It's impossible to fulfil $|1+h\lambda|\leq 1$ when we have imaginary eigenvalues, meaning that Euler's method is unstable for all $h$.
+
+\subsubsection*{ii}
+For $c =2\sqrt{gk} = 7.412$ we have
+\begin{equation}
+\lambda_{1,2} = 0.5c = -3.706
+\end{equation}
+Then
+\begin{equation}
+|1 + h\lambda_{1,2}| \leq 1 \Rightarrow |1+h(-3.706)| \leq 1 \newline
+\end{equation}
+\begin{equation}
+\Rightarrow 0 \leq 3.706h \leq 2 \Rightarrow 0 \leq h \leq 0.5397
+\end{equation}
+meaning that the step length $h$ must be less than $0.5397$ and greater than $0$.
+
+\section*{Problem 2}
+
+
+\section*{Problem 3}
+
+\end{document}
