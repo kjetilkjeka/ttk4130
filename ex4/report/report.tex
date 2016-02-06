@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+
+\usepackage[norsk]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx, float}
+\usepackage{pstricks-add}
+
+
+\author{Kjetil Kjeka}
+\title{TTK4130 - Exercise 4}
+\date{\today}
+
+
+%Slik at matriser kan defineres med linjer
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+
+
+
+\begin{document}
+\maketitle
+\section*{Problem 1}
+Considering the butcher array: \\
+\begin{tabular}{c|c c}
+$0$ & & \\
+$c_2$ & $a_{21}$ & \\ \hline
+& $b_1$ & $b_2$
+\end{tabular}
+\subsection*{a}
+The first order expansion of $k_2$ will be:
+\begin{eqnarray*}
+k_2 =& f(y_n + h a_{21} k_1, t_n + h c_2) &\\
+=& f(y_n, t_n) + k_1 h a_{21} \frac{\partial f}{\partial y} + h c_2 \frac{\partial f}{\partial t} + O(h^2 a_{21}^2) + O(h^2 a_{21} c_2) + O(h^2 c_2^2) &\\
+=& f(y_n, t_n) + k_1 h a_{21} \frac{\partial f}{\partial y} + h c_2 \frac{\partial f}{\partial t} + O(h^2) &
+\end{eqnarray*}
+Now assuming that $c_2 = a_{21} = K$ 
+\[k_2 = f(y_n, t_n) + hK( k_1\frac{\partial f}{\partial y} + \frac{\partial f}{\partial t}) + O(h^2)\]
+Since $k_1 = f(y_n, t_n)$ and $\frac{df}{dt} = f(y_n, t_n) \frac{\partial f}{\partial y} + \frac{\partial f}{\partial t}$
+\[k_2 = f(y_n, t_n) + hK \frac{df}{dt} + O(h^2) \]
+
+
+\subsection*{b}
+For it to be order $p$, $p$ must be the smallest integer to satisfy:
+\[ y_{n+1} = y_n + h f(y_n, t) + \dots + \frac{h^p}{p!} \frac{d^{p-1} f(y_n, t_n)}{dt^{p-1} + O(h^{p+1})} \]
+Meaning that 
+\[b_1 + b_2 = 1\] 
+and 
+\[b_2K = \frac{1}{2}\]
+is needed for it to be of order 2.
+
+
+
+
+
+\end{document}
