@@ -54,8 +54,22 @@ and
 \[b_2K = \frac{1}{2}\]
 is needed for it to be of order 2.
 
-
-
+\section*{Problem 3}
+The dc motor system is given by:
+\begin{eqnarray*}
+L_a \frac{d i_a}{dt} &=& -R_a i_a - K_E \omega_m + u_a \\
+J_m \frac{d \omega_m}{dt} &=& K_t - T_L
+\end{eqnarray*}
+\subsection*{a}
+Let $T_L = u_a = 0$ and $K_E = K_T = K$. Using the lyapunov candidate:
+\[V = \frac{1}{2} L_a i_a^2 + \frac{1}{2} J_m \omega_m\]
+Which satisfies $V > 0, \forall V \not = 0$ implies that
+\begin{eqnarray*}
+\dot{V} &=& i_a(-R_a i_a - K \omega_m) + \omega_m(K i_a) \\
+&=& -R_a i_a^2 + \omega_m i_a (K - K) \\
+&=& -R_a i_a^2
+\end{eqnarray*}
+Which obviously satisfies $\dot{V} \leq 0$ when $R_a > 0$
 
 
 \end{document}
