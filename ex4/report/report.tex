@@ -71,5 +71,17 @@ Which satisfies $V > 0, \forall V \not = 0$ implies that
 \end{eqnarray*}
 Which obviously satisfies $\dot{V} \leq 0$ when $R_a > 0$
 
+\subsection*{b}
+Given the input and outputs $\mathbf{u} = \begin{bmatrix} u_a \\ -T_L \end{bmatrix}$, $\mathbf{y} = \begin{bmatrix} i_a \\ \omega_m \end{bmatrix}$ and $V = \frac{1}{2} L_a i_a^2 + \frac{1}{2} J_m \omega_m^2$
+\[\mathbf{u} \mathbf{y} = u_a i_a - T_L \omega_m\]
+and
+\begin{eqnarray*}
+\dot{V} &= i_a(-R_a i_a - K \omega_m + u_a + \omega_m ( K i_a - T_L) \\
+&= - R_a i_a^2 - K \omega_m i_a + i_a u_a + \omega_m K i_a - \omega_m T_L \\
+&= - R_a i_a^2 + i_a u_a - \omega_m T_L \\
+&= - R_a i_a^2 + \mathbf{u} \mathbf{y}^T \leq \mathbf{u} \mathbf{y}^T
+\end{eqnarray*}
+hence passive
+
 
 \end{document}
