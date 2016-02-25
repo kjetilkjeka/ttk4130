@@ -219,6 +219,30 @@ Which is the same function as the Padé-approximation $P^1_2(h \lambda)$
 \subsection*{c}
 Since the stability function is on the form $P^k_m$ where $m = k + 1$ we know that this function is L-stable.
 
+\section*{Problem 4}
+\subsection*{a}
+Mass balance gives that
+\[\dot{m} = - p q\]
+Since we $\rho$ is constant we know that $m = \rho V = \rho A h$ such that:
+\[\dot{h} = -\frac{q}{A} \]
+The valve behaviour is given by $q = C_V \sqrt{p - p_0} = C_v \sqrt{\rho g h}$
+\[\dot{h} = - \frac{C_V}{A} \sqrt{\rho g h} \]
+
+\subsection*{b}
+The linearized system around $\bar{h}$ is given by
+\[\dot{h} = - (\frac{C_V}{A} \sqrt{\rho g \bar{h}}) + (\frac{C_V}{A} \frac{\rho g}{\sqrt{\rho g \bar{h}}}) h \] 
+As $h \Rightarrow 0$ the eigenvalue will go to negative infinity. 
+
+\subsection*{c}
+We can see that as $h$ approaches $0$ the step length will become smaller as shown in Figure \ref{fig:4c}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=.8\textwidth]{4c.eps}
+\caption{Step length for valve function}
+\label{fig:4c}
+\end{figure}
+
               
 
 
