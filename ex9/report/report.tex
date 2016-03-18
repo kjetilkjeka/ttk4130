@@ -1,0 +1,65 @@
+\documentclass[11pt]{article}
+
+\usepackage[norsk]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx, float}
+\usepackage{pstricks-add}
+
+
+\author{Kjetil Kjeka}
+\title{TTK4130 - Exercise 9}
+\date{\today}
+
+
+%Slik at matriser kan defineres med linjer
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\newcommand{\abs}[1]{|#1|} 
+
+
+\begin{document}
+\maketitle
+\section*{Problem 1}
+\subsection*{a}
+Wish to show that $\mathbf{R}_b^a = 
+\begin{bmatrix}
+\frac{1}{2} \sqrt{3} & \frac{1}{2} & 0 \\
+-\frac{1}{2} & \frac{1}{2} \sqrt{3} & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$ is a rotation matrix by showing it is in $SO(3) = 
+\{\mathbf{R} | \mathbf{R} \in \mathbb{R}^{3\times3}, \mathbf{R}^T \mathbf{R} = \mathbf{I}, \det{\mathbf{R}} = 1 \}$. One can see that $\mathbf{R} \in \mathbb{R}^{3\times3}$ must be true since $R_b^a$ is obviously a $3\times3$ matrix. The second property must be true as well since 
+\begin{eqnarray*}
+\mathbf{R}^T \mathbf{R} &=& 
+\begin{bmatrix}
+\frac{1}{2} \sqrt{3} & -\frac{1}{2} & 0 \\
+\frac{1}{2} & \frac{1}{2} \sqrt{3} & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+\frac{1}{2} \sqrt{3} & \frac{1}{2} & 0 \\
+-\frac{1}{2} & \frac{1}{2} \sqrt{3} & 0 \\
+0 & 0 & 1
+\end{bmatrix} \\
+&=& 
+\begin{bmatrix}
+\frac{3}{4} + \frac{1}{4} + 0 & - \frac{3}{4} + \frac{3}{4} + 0 & 0 + 0 + 0 \\
+- \frac{3}{4} + \frac{3}{4} + 0 & \frac{1}{4} + \frac{3}{4} + 0 & 0 + 0 + 0 \\
+0 + 0 + 0 & 0 + 0 + 0 & 0 + 0 + 1 \\
+\end{bmatrix} \\
+&=&
+\mathbf{I}
+\end{eqnarray*}
+The last property is also satisfied since
+\[\det{\mathbf{R}} = (\frac{1}{2} \sqrt{3})(\frac{1}{2} \sqrt{3})(1) - (\frac{1}{2})(-\frac{1}{2})(1) = 1 \]
+And thus the $R_b^a$ is a rotation matrix.
+
+\subsection*{b}
+
+\end{document}
