@@ -3,6 +3,7 @@
 \usepackage[norsk]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath, amssymb, amsthm}
+\usepackage{gensymb}
 \usepackage{graphicx, float}
 \usepackage{pstricks-add}
 
@@ -61,5 +62,14 @@ The last property is also satisfied since
 And thus the $R_b^a$ is a rotation matrix.
 
 \subsection*{b}
+The rotation matrix for the z-axis is
+\[\mathbf{R}_z(\psi) = 
+\begin{bmatrix}
+\cos{\psi} & -\sin{\psi} & 0 \\
+\sin{\psi} & \cos{\psi} & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\]
+Seeing that $\mathbf{R}_z(30\degree) = \mathbf{R}_b^a$, meaning that $\mathbf{R}_b^a$ is a $30\degree$ rotation about the z-axis
 
 \end{document}
