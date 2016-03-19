@@ -103,4 +103,42 @@ $(u^a)^T w^a = (u^b)^T w^b$
 
 \subsection*{ii}
 
+\subsection*{f}
+Calculating the rotation matrix from a general euler angle can be done like shown below:
+\begin{eqnarray*}
+\mathbf{R}_b^a &=& \mathbf{R}_{z,\psi} \mathbf{R}_{y,\theta} \mathbf{R}_{x,\phi} \\
+&=&
+\begin{bmatrix}
+c\psi & -s\psi & 0 \\
+s\psi & c\psi & 0 \\
+0 & 0 & 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+c\theta & 0 & s\theta \\
+0 & 1 & 0 \\
+-s\theta & 0 & c\theta
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & c\phi & -s\phi \\
+0 & s\phi & c\phi
+\end{bmatrix} \\
+&=& 
+\begin{bmatrix}
+c\psi & -s\psi & 0 \\
+s\psi & c\psi & 0 \\
+0 & 0 & 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+c\theta & s\theta s\phi & s\theta c\phi \\
+0 & c\phi & - s\phi  \\
+- s\theta & c\theta s\phi & c\theta c\phi
+\end{bmatrix} \\
+&=& \begin{bmatrix}
+c\psi c\theta  & c\psi s\theta s\phi - s\psi c\phi & c\psi s\theta c\phi + s\psi s\phi \\
+c\psi c\theta & s\psi s\theta s\phi + c\psi c\phi &   c\psi s\theta c\phi - s\psi s\theta \\
+- s\theta & c\theta s\phi & c\theta c\phi
+\end{bmatrix}
+\end{eqnarray*}
+
 \end{document}
