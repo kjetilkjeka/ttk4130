@@ -1,6 +1,6 @@
 \documentclass[11pt]{article}
 
-\usepackage[norsk]{babel}
+%\usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{gensymb}
@@ -91,7 +91,16 @@ $\mathbf{R}_a^b$ is the rotation matrix that rotate $-30\degree$ about the z-axi
 \]
 
 \subsection*{e}
+\subsubsection*{i}
+$(u^a)^T w^a = (u^b)^T w^b$
+\begin{proof}
+\begin{eqnarray*}
+(u^a)^T w^a &=& (\mathbf{R}_b^a u^b)^T \mathbf{R}_b^a w^b \\
+&=& (u^b)^T (\mathbf{R}_b^a)^T \mathbf{R}_b^a w^b \\
+&=& (u^b)^T w^b
+\end{eqnarray*}
+\end{proof}
 
-
+\subsection*{ii}
 
 \end{document}
