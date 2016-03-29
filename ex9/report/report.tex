@@ -265,4 +265,104 @@ s q_2 & c q_2 & 0 & l_2 s q_2 \\
 \end{bmatrix}
 \]
 
+\subsection*{c}
+\subsubsection*{Manipulator A}
+\begin{eqnarray*}
+T^0_2 &=& A_1 A_2 = 
+\begin{bmatrix}
+c q_1 & - s q_1 & 0 & l_1 c q_1 \\
+s q_1 & c q_1 & 0 & l_1 s q_1 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 & q_2 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix} \\
+&=&
+\begin{bmatrix}
+c q_1 & - s q_1 & 0  & (q_2 + l_1) c q_1 \\
+s q_1 & c q_1   & 0  & (q_2 + l_1) s q_1 \\
+0     & 0       & 1  & 0        \\
+0     & 0       & 0  & 1
+\end{bmatrix}
+\end{eqnarray*}
+
+\subsubsection*{Manipulator B}
+\begin{eqnarray*}
+T^0_2 &=& A_1 A_2 = 
+\begin{bmatrix}
+c q_1 & - s q_1 & 0 & l_1 c q_1 \\
+s q_1 & c q_1 & 0 & l_1 s q_1 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+c q_2 & - s q_2 & 0 & l_2 c q_2 \\
+s q_2 & c q_2 & 0 & l_2 s q_2 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix} \\
+&=&
+\begin{bmatrix}
+c (q_1 + q_2) & - s (q_1 + q_2) & 0  & l_2 c (q_1 + q_2) + l_1 c q_1 \\
+s (q_1 + q_2) & c (q_1 + q_2)   & 0  & l_2 s (q_1 + q_2) + l_1 s q_1 \\
+0     & 0       & 1  & 0        \\
+0     & 0       & 0  & 1
+\end{bmatrix}
+\end{eqnarray*}
+
+
+\subsection*{d}
+\subsubsection*{Manipulator A}
+\begin{eqnarray*}
+g_0 &=& T^0_2 g^2 = 
+\begin{bmatrix}
+c q_1 & - s q_1 & 0  & (q_2 + l_1) c q_1 \\
+s q_1 & c q_1   & 0  & (q_2 + l_1) s q_1 \\
+0     & 0       & 1  & 0        \\
+0     & 0       & 0  & 1
+\end{bmatrix} 
+\begin{bmatrix}
+1 \\
+1 \\
+1 \\
+1
+\end{bmatrix} \\
+&=& 
+\begin{bmatrix}
+(q_2 + l_1 + 1) c q_1 - s q_1 \\
+(q_2 + l_1 + 1) s q_1 + s q_1 \\
+1 \\
+1
+\end{bmatrix}
+\end{eqnarray*}
+
+\subsubsection*{Manipulator B}
+\begin{eqnarray*}
+g_0 &=& T^0_2 g^2 = 
+\begin{bmatrix}
+c (q_1 + q_2) & - s (q_1 + q_2) & 0  & l_2 c (q_1 + q_2) + l_1 c q_1 \\
+s (q_1 + q_2) & c (q_1 + q_2)   & 0  & l_2 s (q_1 + q_2) + l_1 s q_1 \\
+0     & 0       & 1  & 0        \\
+0     & 0       & 0  & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 \\
+1 \\
+1 \\
+1
+\end{bmatrix} \\
+&=&
+\begin{bmatrix}
+(l_2 + 1) c (q_1 + q_2) - s (q_1 + q_2) + l_1 c q_1 \\
+(l_2 + 1) s (q_1 + q_2) + c (q_1 + q_2) + l_1 s q_1 \\
+1 \\
+1
+\end{bmatrix}
+\end{eqnarray*}
+
+
 \end{document}
