@@ -207,5 +207,62 @@ The general expression for $A_i$ is:
 \end{bmatrix}
 \end{eqnarray*}
 
+\subsection*{b}
+\subsubsection*{Manipilator A}
+\[A_1 = 
+\begin{bmatrix}
+\mathbf{R}_z(q_1) & \begin{bmatrix} l_1 \cos{q_1} \\ l_1 \sin{q_1} \\ 0 \end{bmatrix} \\
+\mathbf{0}^T & 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+c q_1 & - s q_1 & 0 & l_1 c q_1 \\
+s q_1 & c q_1 & 0 & l_1 s q_1 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\]
+\[A_2 =
+\begin{bmatrix}
+\mathbf{I} & \begin{bmatrix} q_2 \\ 0 \\ 0 \end{bmatrix} \\
+\mathbf{0}^T & 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0 & 0 & q_2 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\]
+
+\subsubsection*{Manipulator B}
+\[A_1 = 
+\begin{bmatrix}
+\mathbf{R}_z(q_1) & \begin{bmatrix} l_1 \cos{q_1} \\ l_1 \sin{q_1} \\ 0 \end{bmatrix} \\
+\mathbf{0}^T & 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+c q_1 & - s q_1 & 0 & l_1 c q_1 \\
+s q_1 & c q_1 & 0 & l_1 s q_1 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\]
+
+\[A_2 = 
+\begin{bmatrix}
+\mathbf{R}_z(q_2) & \begin{bmatrix} l_2 \cos{q_2} \\ l_2 \sin{q_2} \\ 0 \end{bmatrix} \\
+\mathbf{0}^T & 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+c q_2 & - s q_2 & 0 & l_2 c q_2 \\
+s q_2 & c q_2 & 0 & l_2 s q_2 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\]
 
 \end{document}
