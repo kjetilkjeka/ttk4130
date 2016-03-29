@@ -364,5 +364,29 @@ s (q_1 + q_2) & c (q_1 + q_2)   & 0  & l_2 s (q_1 + q_2) + l_1 s q_1 \\
 \end{bmatrix}
 \end{eqnarray*}
 
+\section*{3}
+\subsection*{a}
+From (5) in the assignment text we know that:
+\[\mathbf{R} = \mathbf{e}^\times + \cos{\theta \mathbf{I}} + \mathbf{k}\mathbf{k}^T (1 - \cos{\theta}) \]
+where
+\[\mathbf{e}^\times = \sin{\theta}
+\begin{bmatrix}
+0 & -k_3 & k_2 \\
+-k_3 & 0 & -k_1 \\
+-k_2 & k_1 & 0
+\end{bmatrix}
+\]
+Meaning that:
+\begin{eqnarray*}
+r_{11} &=& (1-k_1^2)\cos{\theta} + k_1^2 \\
+r_{22} &=& (1-k_2^2)\cos{\theta} + k_2^2 \\
+r_{33} &=& (1-k_3^2)\cos{\theta} + k_3^2
+\end{eqnarray*}
+Since we know that $k_1^2 + k_2^2 + k_3^2 = 1$
+\[r_{11} + r_{22} + r_{33} = (3 - (k_1^2 + k_2^2 + k_3^2))\cos{\theta} + (k_1^2 + k_2^2 + k_3^2)\]
+Which means that
+\[\cos{\theta} = \frac{r_{11} + r_{22} + r_{33} - 1}{2}\]
+
+\subsection*{b}
 
 \end{document}
