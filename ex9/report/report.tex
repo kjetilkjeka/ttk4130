@@ -372,7 +372,7 @@ where
 \[\mathbf{e}^\times = \sin{\theta}
 \begin{bmatrix}
 0 & -k_3 & k_2 \\
--k_3 & 0 & -k_1 \\
+k_3 & 0 & -k_1 \\
 -k_2 & k_1 & 0
 \end{bmatrix}
 \]
@@ -388,5 +388,34 @@ Which means that
 \[\cos{\theta} = \frac{r_{11} + r_{22} + r_{33} - 1}{2}\]
 
 \subsection*{b}
+By calculating terms in $\mathbf{R}$ we find
+\begin{eqnarray*}
+r_{32} &=&  k_1 \sin{\theta} + k_3 k_2 (1 - \cos{\theta}) \\
+r_{23} &=& -k_1 \sin{\theta} + k_3 k_2 (1 - \cos{\theta}) \\
+r_{13} &=&  k_2 \sin{\theta} + k_1 k_3 (1 - \cos{\theta}) \\
+r_{31} &=& -k_2 \sin{\theta} + k_1 k_3 (1 - \cos{\theta}) \\
+r_{21} &=&  k_3 \sin{\theta} + k_2 k_1 (1 - \cos{\theta}) \\
+r_{12} &=& -k_3 \sin{\theta} + k_2 k_1 (1 - \cos{\theta})
+\end{eqnarray*}
+Which means that
+\[\mathbf{e} = 
+\sin{\theta} 
+\begin{bmatrix}
+k_1 \\
+k_2 \\
+k_3
+\end{bmatrix}
+=
+\frac{1}{2}
+\begin{bmatrix}
+r_{32} - r_{23} \\
+r_{13} - r_{31} \\
+r_{21} - r_{12}
+\end{bmatrix}
+\]
+
+
+\subsection*{c}
+
 
 \end{document}
