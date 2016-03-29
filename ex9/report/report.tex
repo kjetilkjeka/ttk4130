@@ -171,5 +171,41 @@ Since it's obviously a 3 by 3 matrix.
 
 \section*{Problem 2}
 \subsection*{a}
+The general expression for $A_i$ is:
+\begin{eqnarray*}
+\mathbf{A}_i &=& Rot_{z,\theta_i} Trans_{x,d_i} Trans_{x,a_i} Rot_{x,\alpha_i} \\
+&=& 
+\begin{bmatrix} 
+\mathbf{R}_z(\theta_i) & \mathbf{0} \\
+\mathbf{0}^T & 1
+\end{bmatrix}
+\begin{bmatrix}
+\mathbf{I} & \begin{bmatrix}0 \\ 0 \\ d_i \end{bmatrix} \\
+\mathbf{0} & 1
+\end{bmatrix}
+\begin{bmatrix}
+\mathbf{I} & \begin{bmatrix} a_i \\ 0 \\ 0 \end{bmatrix} \\
+\mathbf{0} & 1
+\end{bmatrix}
+\begin{bmatrix} 
+\mathbf{R}_z(\theta_i) & \mathbf{0} \\
+\mathbf{0}^T & 1
+\end{bmatrix} \\
+&=&
+\begin{bmatrix} 
+\mathbf{R}_z(\theta_i) & \begin{bmatrix}0 \\ 0 \\ d_i \end{bmatrix} \\
+\mathbf{0}^T & 1
+\end{bmatrix}
+\begin{bmatrix} 
+\mathbf{R}_x(\alpha_i) & \begin{bmatrix} a_1 \\ 0 \\ 0 \end{bmatrix} \\
+\mathbf{0}^T & 1
+\end{bmatrix} \\
+&=&
+\begin{bmatrix} 
+\mathbf{R}_z(\theta_i)\mathbf{R}_x(\alpha_i) & \begin{bmatrix}a_i \cos{\theta_i} \\ a_i \sin{\theta_i} \\ d_i \end{bmatrix} \\
+\mathbf{0}^T & 1
+\end{bmatrix}
+\end{eqnarray*}
+
 
 \end{document}
